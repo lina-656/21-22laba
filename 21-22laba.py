@@ -20,15 +20,16 @@ def main():
 
             if choice == '1':
                 executor.submit(task1)  # Запускаем задание 1 в фоновом режиме
-
+                executor.join()
             elif choice == '2':
                 executor.submit(task2)  # Запускаем задание 2 в фоновом режиме
-
+                executor.join()
             elif choice == '3':
                 executor.submit(task3)  # Запускаем задание 3 в фоновом режиме
-
+                executor.join()
             elif choice == '4':
                 print("Завершение работы программы.")  # Сообщаем о завершении
+                executor.join()
                 break  # Выходим из цикла
 
             else:
